@@ -47,6 +47,19 @@ Each of those concerns belongs in its **own dedicated module**.
 
 ---
 
+## Common Use Cases
+
+This module is intended for firewall-focused building blocks in Azure network designs, including:
+
+- Basic routed egress for a workload subnet, where `0.0.0.0/0` points to the Azure Firewall private IP
+- Centralized outbound inspection from multiple spoke VNets through a firewall deployed in the hub VNet
+- East-west spoke-to-spoke inspection in hub-and-spoke topologies, where spoke route tables use `VirtualAppliance` next hops
+- NAT and application/network rule collection examples that can be composed with dedicated VNet, Peering, Routing, Public IP, and Compute modules
+
+See [`examples/02_hub_spoke_transit_firewall`](./examples/02_hub_spoke_transit_firewall) for a complete hub-and-spoke transit-firewall pattern with centralized egress.
+
+---
+
 ## Repository Structure
 
 ```bash

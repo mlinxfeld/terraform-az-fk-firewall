@@ -1,5 +1,5 @@
 module "firewall" {
-  source = "../.."
+  source = "git::https://github.com/mlinxfeld/terraform-az-fk-firewall.git?ref=v0.2.0"
 
   name                = "fk-azure-firewall"
   location            = azurerm_resource_group.fk_rg.location
