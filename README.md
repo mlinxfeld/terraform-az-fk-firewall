@@ -53,6 +53,7 @@ Each of those concerns belongs in its **own dedicated module**.
 terraform-az-fk-firewall/
 ├── examples/
 │   ├── 01_basic_firewall/
+│   ├── 02_hub_spoke_transit_firewall/
 │   └── README.md
 ├── main.tf
 ├── inputs.tf
@@ -76,7 +77,7 @@ module "public_ip" {
 }
 
 module "firewall" {
-  source = "git::https://github.com/mlinxfeld/terraform-az-fk-firewall.git?ref=v0.1.0"
+  source = "git::https://github.com/mlinxfeld/terraform-az-fk-firewall.git?ref=v1.0.0"
 
   name                = "fk-azure-firewall"
   location            = "westeurope"
@@ -149,3 +150,14 @@ ip_configurations = {
 | `firewall_private_ip` | Primary private IP |
 | `firewall_private_ips` | Private IPs by configuration key |
 | `firewall_public_ip_ids` | Public IP IDs by configuration key |
+
+---
+
+## 🪪 License
+
+Licensed under the **Universal Permissive License (UPL), Version 1.0**.
+See [LICENSE](LICENSE) for details.
+
+---
+
+© 2026 FoggyKitchen.com — Cloud. Code. Clarity.
