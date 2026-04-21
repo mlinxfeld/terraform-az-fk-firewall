@@ -1,6 +1,6 @@
 # terraform-az-fk-firewall
 
-This repository contains a reusable **Terraform / OpenTofu module** and a practical starter example for deploying **Azure Firewall** as a dedicated network security and egress layer in Azure.
+This repository contains a reusable **Terraform / OpenTofu module** and practical examples for deploying **Azure Firewall** as a dedicated network security and egress layer in Azure.
 
 It is part of the **[FoggyKitchen.com training ecosystem](https://foggykitchen.com/courses/azure-fundamentals-terraform-course/)** and is designed as a **clean, composable firewall building block** that fits into Azure network security architectures.
 
@@ -77,7 +77,7 @@ module "public_ip" {
 }
 
 module "firewall" {
-  source = "git::https://github.com/mlinxfeld/terraform-az-fk-firewall.git?ref=v1.0.0"
+  source = "git::https://github.com/mlinxfeld/terraform-az-fk-firewall.git?ref=v0.2.0"
 
   name                = "fk-azure-firewall"
   location            = "westeurope"

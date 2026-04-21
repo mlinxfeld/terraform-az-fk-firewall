@@ -1,17 +1,18 @@
 # Azure Firewall with Terraform/OpenTofu - Training Examples
 
-This directory contains the currently published example for the **terraform-az-fk-firewall** module.
-The first release focuses on a practical Azure Firewall deployment with a routed workload subnet.
+This directory contains runnable examples for the **terraform-az-fk-firewall** module.
+The examples focus on practical Azure Firewall deployment patterns, from a routed workload subnet to centralized hub-and-spoke egress.
 
 These examples are part of the **[FoggyKitchen.com training ecosystem](https://foggykitchen.com/courses-2/)** and are used across Azure and multicloud courses covering networking, security, and architecture fundamentals.
 
 ---
 
-## Published Example
+## Published Examples
 
 | Example | Title | Key Topics |
 |:-------:|:------|:-----------|
 | 01 | **Basic Azure Firewall** | Azure Firewall, `AzureFirewallSubnet`, public IP, basic network and application rules |
+| 02 | **Hub-Spoke Transit Firewall** | Hub VNet, spoke VNets, VNet peering, UDR, centralized east-west and outbound inspection |
 
 ---
 
@@ -26,6 +27,15 @@ To run an example:
 
 ```bash
 cd examples/01_basic_firewall
+tofu init
+tofu plan
+tofu apply
+```
+
+To run the hub-and-spoke example:
+
+```bash
+cd examples/02_hub_spoke_transit_firewall
 tofu init
 tofu plan
 tofu apply
@@ -59,4 +69,4 @@ See [LICENSE](../LICENSE) for details.
 
 ---
 
-© 2026 FoggyKitchen.com - *Cloud. Code. Clarity.*
+© 2026 FoggyKitchen.com — Cloud. Code. Clarity.

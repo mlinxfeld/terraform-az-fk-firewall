@@ -13,6 +13,8 @@ There are intentionally **no spokes and no peering** in this example.
 
 ## Architecture Overview
 
+![Architecture diagram](./01_basic_firewall_architecture.png)
+
 This deployment creates:
 
 - A Resource Group
@@ -32,8 +34,6 @@ This deployment creates:
 - Route table (via `terraform-az-fk-routing`):
   - `rt-workload`
   - default route `0.0.0.0/0` with `VirtualAppliance` next hop set to the Azure Firewall private IP
-
-![Architecture diagram](./01_basic_firewall_architecture.png)
 
 ## Rule Design
 
@@ -63,7 +63,7 @@ tofu apply
 
 After deployment, Terraform will output:
 
-- Hub VNet ID
+- VNet ID
 - Workload VM ID and private IP
 - Azure Firewall ID and name
 - Azure Firewall private IP
@@ -263,3 +263,7 @@ tofu destroy
 ## License
 
 Licensed under the Universal Permissive License (UPL), Version 1.0.
+
+---
+
+© 2026 FoggyKitchen.com — Cloud. Code. Clarity.
